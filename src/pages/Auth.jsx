@@ -84,25 +84,25 @@ const Auth = () => {
       <div className="w-full max-w-md">
         {/* Brand Banner */}
         <div className="flex flex-col items-center mb-8">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/20 mb-3 pulse-glow">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-600/10 dark:bg-indigo-600/20 text-indigo-600 dark:text-indigo-400 border border-indigo-500/20 dark:border-indigo-500/20 mb-3 pulse-glow">
             <Sparkles className="h-6 w-6" />
           </div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-white font-sans text-center">
+          <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 dark:text-white font-sans text-center">
             DropMatch
           </h1>
-          <p className="text-slate-400 text-sm text-center mt-1">
+          <p className="text-slate-600 dark:text-slate-400 text-sm text-center mt-1">
             Purely discovery + AI-powered taxonomy. No fees, no carts.
           </p>
         </div>
 
         {/* Tab Selection */}
-        <div className="grid grid-cols-2 rounded-lg bg-slate-900/60 p-1 border border-slate-800/80 mb-6">
+        <div className="grid grid-cols-2 rounded-lg bg-slate-100 dark:bg-slate-900/60 p-1 border border-slate-200 dark:border-slate-800/80 mb-6">
           <button
             onClick={() => { setIsLogin(true); setError(''); }}
             className={`rounded-md py-2 text-sm font-semibold tracking-wide transition-all cursor-pointer ${
               isLogin 
                 ? 'bg-indigo-600 text-white shadow' 
-                : 'text-slate-400 hover:text-slate-200'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
             }`}
           >
             Sign In
@@ -112,7 +112,7 @@ const Auth = () => {
             className={`rounded-md py-2 text-sm font-semibold tracking-wide transition-all cursor-pointer ${
               !isLogin 
                 ? 'bg-indigo-600 text-white shadow' 
-                : 'text-slate-400 hover:text-slate-200'
+                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
             }`}
           >
             Create Account
@@ -120,7 +120,7 @@ const Auth = () => {
         </div>
 
         {/* Auth Card */}
-        <div className="glass-panel rounded-2xl p-8 border border-slate-800/80">
+        <div className="glass-panel rounded-2xl p-8 border border-slate-200/50 dark:border-slate-800/80">
           <form onSubmit={handleSubmit} className="space-y-5">
             {error && (
               <div className="rounded-lg bg-rose-500/10 border border-rose-500/20 p-4 text-rose-400 text-xs flex items-start gap-2.5">
@@ -131,7 +131,7 @@ const Auth = () => {
 
             {!isLogin && (
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
                   Full Name
                 </label>
                 <input
@@ -141,13 +141,13 @@ const Auth = () => {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="e.g. John Doe"
-                  className="w-full rounded-xl bg-slate-950/70 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-slate-600 px-4 py-3 text-sm transition-all outline-none"
+                  className="w-full rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 px-4 py-3 text-sm transition-all outline-none"
                 />
               </div>
             )}
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
                 Email Address
               </label>
               <input
@@ -157,12 +157,12 @@ const Auth = () => {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="you@company.com"
-                className="w-full rounded-xl bg-slate-950/70 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-slate-600 px-4 py-3 text-sm transition-all outline-none"
+                className="w-full rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 px-4 py-3 text-sm transition-all outline-none"
               />
             </div>
 
             <div>
-              <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2">
+              <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-2">
                 Password
               </label>
               <input
@@ -172,14 +172,14 @@ const Auth = () => {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="••••••••"
-                className="w-full rounded-xl bg-slate-950/70 border border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-white placeholder-slate-600 px-4 py-3 text-sm transition-all outline-none"
+                className="w-full rounded-xl bg-slate-50 dark:bg-slate-950/70 border border-slate-200 dark:border-slate-800 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-600 px-4 py-3 text-sm transition-all outline-none"
               />
             </div>
 
             {/* Custom Role Selector Cards on Signup */}
             {!isLogin && (
               <div>
-                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">
+                <label className="block text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">
                   Choose Your Account Role
                 </label>
                 <div className="grid grid-cols-2 gap-3">
@@ -187,13 +187,13 @@ const Auth = () => {
                     onClick={() => handleRoleSelect('shop')}
                     className={`rounded-xl border p-4 cursor-pointer transition-all flex flex-col items-center text-center ${
                       formData.role === 'shop'
-                        ? 'border-indigo-500 bg-indigo-500/10 text-white shadow'
-                        : 'border-slate-800 bg-slate-950/20 text-slate-400 hover:border-slate-700 hover:text-slate-300'
+                        ? 'border-indigo-500 bg-indigo-500/10 text-indigo-900 dark:text-white shadow'
+                        : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/20 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700 hover:text-slate-800 dark:hover:text-slate-300'
                     }`}
                   >
-                    <Store className={`h-6 w-6 mb-2 ${formData.role === 'shop' ? 'text-indigo-400' : 'text-slate-500'}`} />
+                    <Store className={`h-6 w-6 mb-2 ${formData.role === 'shop' ? 'text-indigo-600 dark:text-indigo-400' : 'text-slate-400 dark:text-slate-500'}`} />
                     <span className="text-xs font-bold block mb-1">Shop</span>
-                    <span className="text-[10px] text-slate-500 leading-tight">
+                    <span className="text-[10px] text-slate-500 dark:text-slate-400 leading-tight">
                       I have products to offload or source.
                     </span>
                   </div>
@@ -202,13 +202,13 @@ const Auth = () => {
                     onClick={() => handleRoleSelect('dropshipper')}
                     className={`rounded-xl border p-4 cursor-pointer transition-all flex flex-col items-center text-center ${
                       formData.role === 'dropshipper'
-                        ? 'border-sky-500 bg-sky-500/10 text-white shadow'
-                        : 'border-slate-800 bg-slate-950/20 text-slate-400 hover:border-slate-700 hover:text-slate-300'
+                        ? 'border-sky-500 bg-sky-500/10 text-sky-900 dark:text-white shadow'
+                        : 'border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950/20 text-slate-600 dark:text-slate-400 hover:border-slate-300 dark:hover:border-slate-700 hover:text-slate-800 dark:hover:text-slate-300'
                     }`}
                   >
-                    <Building2 className={`h-6 w-6 mb-2 ${formData.role === 'dropshipper' ? 'text-sky-400' : 'text-slate-500'}`} />
+                    <Building2 className={`h-6 w-6 mb-2 ${formData.role === 'dropshipper' ? 'text-sky-600 dark:text-sky-400' : 'text-slate-400 dark:text-slate-500'}`} />
                     <span className="text-xs font-bold block mb-1">Dropshipper</span>
-                    <span className="text-[10px] text-slate-500 leading-tight">
+                    <span className="text-[10px] text-slate-500 dark:text-slate-400 leading-tight">
                       I want to find products to sell.
                     </span>
                   </div>
