@@ -1,0 +1,101 @@
+[
+  {
+    "niche": "Fitness & Activewear",
+    "shop": {
+      "shopName": "Pulse Activewear Co.",
+      "location": "Boston, MA",
+      "rawProductText": "Eco-friendly yoga mats, premium resistance bands, wholesale athletic wear, and stainless steel gym shaker bottles. We offer custom logo printing and B2B wholesale rates."
+    },
+    "dropshipper": {
+      "rawIntentText": "I am looking for eco-friendly fitness gear, organic yoga mats, resistance bands, and high-quality gym accessories to sell to workout enthusiasts."
+    }
+  },
+  {
+    "niche": "Organic Beauty & Skincare",
+    "shop": {
+      "shopName": "Aura Botanicals",
+      "location": "Miami, FL",
+      "rawProductText": "Organic face serums, vegan skincare moisturizers, bamboo makeup remover pads, and lavender essential oils. Cruelty-free certified, wholesale pricing."
+    },
+    "dropshipper": {
+      "rawIntentText": "Sourcing vegan skincare products, organic face serums, and bamboo vanity accessories to retail on our boutique beauty store."
+    }
+  },
+  {
+    "niche": "Smart Tech Accessories",
+    "shop": {
+      "shopName": "NexCharge Systems",
+      "location": "San Jose, CA",
+      "rawProductText": "Magnetic phone cases, fast wireless chargers, leather MagSafe tracker slots, and braided USB-C cables. Premium tech gadgets designed for dropshipping."
+    },
+    "dropshipper": {
+      "rawIntentText": "Looking for smart device accessories, MagSafe phone cases, wireless chargers, and premium gadgets to target tech-savvy audiences."
+    }
+  },
+  {
+    "niche": "Zero-Waste Kitchen",
+    "shop": {
+      "shopName": "EcoKitchen Ware",
+      "location": "Portland, OR",
+      "rawProductText": "Biodegradable bamboo travel utensils, reusable cotton storage bags, compostable lunch containers, and eco-friendly wooden brushes. Perfect zero-waste supplier."
+    },
+    "dropshipper": {
+      "rawIntentText": "Sourcing zero-waste kitchenware, biodegradable bamboo utensils, reusable food storage wraps, and eco-friendly kitchen alternatives."
+    }
+  },
+  {
+    "niche": "Premium Pet Supplies",
+    "shop": {
+      "shopName": "Bark & Tail Co.",
+      "location": "Denver, CO",
+      "rawProductText": "Biodegradable dog waste bags, organic hemp cat toys, stainless steel travel bowls, and leather pet collars. Sustainable B2B pet accessory supplies."
+    },
+    "dropshipper": {
+      "rawIntentText": "Searching for high-quality pet supplies, organic toys, biodegradable waste bags, and unique accessories for pet owners."
+    }
+  },
+  {
+    "niche": "Coffee & Tea Accessories",
+    "shop": {
+      "shopName": "Roast & Brew Gear",
+      "location": "Seattle, WA",
+      "rawProductText": "Stainless steel French presses, reusable mesh tea infusers, ceramic coffee mugs, and hand-crank coffee grinders. High-quality wholesale coffee items."
+    },
+    "dropshipper": {
+      "rawIntentText": "Looking for premium coffee and tea accessories, stainless steel French presses, reusable infusers, and manual coffee grinders."
+    }
+  },
+  {
+    "niche": "Outdoor & Camping Gear",
+    "shop": {
+      "shopName": "Summit Trails Co.",
+      "location": "Salt Lake City, UT",
+      "rawProductText": "Lightweight camping hammocks, solar power banks, quick-dry travel towels, and steel utility carabiners. Durable outdoor equipment catalog."
+    },
+    "dropshipper": {
+      "rawIntentText": "Sourcing outdoor travel accessories, lightweight camping hammocks, solar chargers, and durable camping tools."
+    }
+  },
+  {
+    "niche": "Home Gardening Essentials",
+    "shop": {
+      "shopName": "GreenThumb Supplies",
+      "location": "Austin, TX",
+      "rawProductText": "Biodegradable fiber seed pots, mini steel gardening toolsets, organic fertilizer kits, and hemp grow bags. Zero-plastic home gardening kits."
+    },
+    "dropshipper": {
+      "rawIntentText": "Looking to source home gardening kits, biodegradable seed pots, and mini steel tools for urban gardening enthusiasts."
+    }
+  },
+  {
+    "niche": "Eco-Friendly Office",
+    "shop": {
+      "shopName": "TerraOffice Goods",
+      "location": "Chicago, IL",
+      "rawProductText": "Recycled cork notebooks, bamboo ballpoint pens, felt laptop sleeves, and recycled paper planners. Clean minimalist office supplies."
+    },
+    "dropshipper": {
+      "rawIntentText": "Searching for eco-friendly office accessories, recycled cork notebooks, bamboo pens, and sustainable laptop sleeves."
+    }
+  }
+]
