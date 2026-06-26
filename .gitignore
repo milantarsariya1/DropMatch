@@ -1,5 +1,31 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
 build/
+
+# Environment variables — NEVER commit these
 .env
+.env.local
+.env.*.local
+.env.production
+
+# Editor
 .vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Prisma generated (optional, keep schema but not migrations lock if preferred)
+prisma/migrations/
+
+# Package manager locks (keep package-lock.json, ignore yarn/pnpm)
+yarn.lock
+pnpm-lock.yaml
