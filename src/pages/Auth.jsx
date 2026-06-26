@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Sparkles, Building2, Store, Loader2, AlertCircle } from 'lucide-react';
 
 const Auth = () => {
   const { login, signup, user } = useAuth();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
 
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(() => {
+    return searchParams.get('mode') !== 'signup';
+  });
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    email: searchParams.get('email') || '',
     password: '',
     role: 'shop' // default role
   });

@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Home from './pages/Home';
 import Auth from './pages/Auth';
 import ShopDashboard from './pages/ShopDashboard';
 import DropshipperDashboard from './pages/DropshipperDashboard';
@@ -36,25 +37,6 @@ const PrivateRoute = ({ children, allowedRole }) => {
   return children;
 };
 
-// Index route router logic
-const RootRedirect = () => {
-  const { user, loading } = useAuth();
-
-  if (loading) {
-    return (
-      <div className="flex-1 flex flex-col items-center justify-center py-20">
-        <Loader2 className="h-10 w-10 animate-spin text-indigo-500 mb-2" />
-        <span className="text-xs text-slate-500 font-medium font-sans">Connecting session...</span>
-      </div>
-    );
-  }
-
-  if (!user) {
-    return <Navigate to="/auth" replace />;
-  }
-
-  return <Navigate to={user.role === 'shop' ? '/shop' : '/dropshipper'} replace />;
-};
 
 const AppContent = () => {
   return (
@@ -65,7 +47,7 @@ const AppContent = () => {
       {/* Main content page area */}
       <div className="flex-1 flex flex-col">
         <Routes>
-          <Route path="/" element={<RootRedirect />} />
+          <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
           
           <Route 
