@@ -1,4 +1,7 @@
 import express from 'express';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { authenticateToken } from '../middleware/auth.js';
 
 const router = express.Router();
@@ -204,11 +207,6 @@ router.get('/generate-mock-data', authenticateToken, async (req, res) => {
       return res.status(400).json({ error: 'role parameter must be "shop" or "dropshipper"' });
     }
 
-    // Dynamic import to read mockProfiles.json file
-    const fs = await import('fs');
-    const path = await import('path');
-    const { fileURLToPath } = await import('url');
-    
     const __filename = fileURLToPath(import.meta.url);
     const __dirname = path.dirname(__filename);
     const mockFilePath = path.join(__dirname, '../mockProfiles.json');
