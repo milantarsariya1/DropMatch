@@ -39,8 +39,7 @@
 
   /* Dark mode: stable full-viewport gradient, top-right to bottom-left */
   html.dark body::before {
-    background: linear-gradient(135deg, #3d3d3d 0%, #1c1c1c 45%, #000000 100%);
-    background-image: none;
+    background-image: linear-gradient(to bottom left, #374151 0%, #111827 50%, #000000 100%);
   }
 
   html.dark body {
